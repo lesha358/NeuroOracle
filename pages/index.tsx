@@ -12,7 +12,6 @@ import {
   RocketLaunchIcon
 } from '@heroicons/react/24/outline';
 import FadeIn from '../components/animations/FadeIn';
-import Navigation from '../components/Navigation';
 
 const features = [
   {
@@ -71,8 +70,6 @@ const HomePage: NextPage = () => {
         <title>NeuroOracle - Ваш персональный предсказатель</title>
         <meta name="description" content="Получайте точные предсказания с помощью искусственного интеллекта" />
       </Head>
-
-      <Navigation />
 
       {/* Hero секция */}
       <section className="relative bg-gradient-to-r from-primary-600 to-primary-800 text-white pt-32">

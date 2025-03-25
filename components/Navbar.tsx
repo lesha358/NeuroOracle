@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Bars3Icon, XMarkIcon, SparklesIcon } from '@heroicons/react/24/outline';
+import ThemeToggle from './ThemeToggle';
 
 const navigation = [
   { name: 'Главная', href: '/' },
@@ -63,6 +64,15 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
+            <ThemeToggle />
+            <Link
+              href="https://t.me/NeuroOracle_bot"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors duration-200"
+            >
+              Начать
+            </Link>
           </div>
 
           {/* Мобильная кнопка меню */}
