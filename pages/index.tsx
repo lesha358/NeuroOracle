@@ -12,7 +12,7 @@ import {
   RocketLaunchIcon
 } from '@heroicons/react/24/outline';
 import FadeIn from '../components/animations/FadeIn';
-import ThemeToggle from '../components/ThemeToggle';
+import Navigation from '../components/Navigation';
 
 const features = [
   {
@@ -72,25 +72,7 @@ const HomePage: NextPage = () => {
         <meta name="description" content="Получайте точные предсказания с помощью искусственного интеллекта" />
       </Head>
 
-      {/* Header */}
-      <header className="fixed w-full bg-white dark:bg-gray-800 shadow-sm z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold text-primary-600 dark:text-primary-400">
-            NeuroOracle
-          </Link>
-          <div className="flex items-center space-x-4">
-            <ThemeToggle />
-            <Link
-              href="https://t.me/NeuroOracle_bot"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors duration-200"
-            >
-              Начать
-            </Link>
-          </div>
-        </div>
-      </header>
+      <Navigation />
 
       {/* Hero секция */}
       <section className="relative bg-gradient-to-r from-primary-600 to-primary-800 text-white pt-32">
@@ -109,14 +91,6 @@ const HomePage: NextPage = () => {
             </FadeIn>
             <FadeIn delay={0.4}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="https://t.me/NeuroOracle_bot"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-primary-50 transition-colors duration-300"
-                >
-                  Начать использовать
-                </Link>
                 <Link
                   href="/features"
                   className="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors duration-300"
