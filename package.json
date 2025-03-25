@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "description": "Веб-интерфейс для бота предсказаний",
-  "main": "server.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -36,5 +35,8 @@
     "@types/react": "^18.2.57",
     "@types/react-dom": "^18.2.19",
     "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
