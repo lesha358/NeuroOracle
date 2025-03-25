@@ -11,6 +11,8 @@ import {
   ArrowPathIcon,
   RocketLaunchIcon
 } from '@heroicons/react/24/outline';
+import FadeIn from '../components/animations/FadeIn';
+import ThemeToggle from '../components/ThemeToggle';
 
 const features = [
   {
@@ -64,121 +66,157 @@ const benefits = [
 
 const HomePage: NextPage = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
       <Head>
         <title>NeuroOracle - Ваш персональный предсказатель</title>
         <meta name="description" content="Получайте точные предсказания с помощью искусственного интеллекта" />
       </Head>
 
+      {/* Header */}
+      <header className="fixed w-full bg-white dark:bg-gray-800 shadow-sm z-50">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+          <Link href="/" className="text-2xl font-bold text-primary-600 dark:text-primary-400">
+            NeuroOracle
+          </Link>
+          <div className="flex items-center space-x-4">
+            <ThemeToggle />
+            <Link
+              href="https://t.me/NeuroOracle_bot"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors duration-200"
+            >
+              Начать
+            </Link>
+          </div>
+        </div>
+      </header>
+
       {/* Hero секция */}
-      <section className="relative bg-gradient-to-r from-primary-600 to-primary-800 text-white">
+      <section className="relative bg-gradient-to-r from-primary-600 to-primary-800 text-white pt-32">
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="container mx-auto px-4 py-24 relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6">
-              Узнайте свое будущее с NeuroOracle
-            </h1>
-            <p className="text-xl mb-8 text-primary-100">
-              Используйте силу искусственного интеллекта для получения точных предсказаний в различных сферах жизни
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="https://t.me/NeuroOracle_bot"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-primary-50 transition-colors duration-300"
-              >
-                Начать использовать
-              </Link>
-              <Link
-                href="/features"
-                className="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors duration-300"
-              >
-                Узнать больше
-              </Link>
-            </div>
+            <FadeIn>
+              <h1 className="text-5xl font-bold mb-6">
+                Узнайте свое будущее с NeuroOracle
+              </h1>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <p className="text-xl mb-8 text-primary-100">
+                Используйте силу искусственного интеллекта для получения точных предсказаний в различных сферах жизни
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.4}>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="https://t.me/NeuroOracle_bot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-primary-50 transition-colors duration-300"
+                >
+                  Начать использовать
+                </Link>
+                <Link
+                  href="/features"
+                  className="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors duration-300"
+                >
+                  Узнать больше
+                </Link>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
 
       {/* Секция возможностей */}
-      <section className="py-20">
+      <section className="py-20 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Возможности NeuroOracle
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Откройте для себя все преимущества использования нашего сервиса предсказаний
-            </p>
-          </div>
+          <FadeIn>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                Возможности NeuroOracle
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Откройте для себя все преимущества использования нашего сервиса предсказаний
+              </p>
+            </div>
+          </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                <div className={`${feature.color} mb-4`}>
-                  <feature.icon className="h-12 w-12" />
+              <FadeIn key={index} delay={index * 0.1}>
+                <div className="bg-gray-50 dark:bg-gray-700 rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div className={`${feature.color} mb-4`}>
+                    <feature.icon className="h-12 w-12" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    {feature.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600">
-                  {feature.description}
-                </p>
-              </div>
+              </FadeIn>
             ))}
           </div>
         </div>
       </section>
 
       {/* Секция почему выбирают нас */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Почему выбирают нас
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Мы предлагаем уникальный опыт получения предсказаний
-            </p>
-          </div>
+          <FadeIn>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                Почему выбирают нас
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Мы предлагаем уникальный опыт получения предсказаний
+              </p>
+            </div>
+          </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-primary-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="h-8 w-8 text-primary-600" />
+              <FadeIn key={index} delay={index * 0.1}>
+                <div className="text-center">
+                  <div className="bg-primary-50 dark:bg-primary-900/30 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <benefit.icon className="h-8 w-8 text-primary-600 dark:text-primary-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    {benefit.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-600">
-                  {benefit.description}
-                </p>
-              </div>
+              </FadeIn>
             ))}
           </div>
         </div>
       </section>
 
       {/* Секция CTA */}
-      <section className="py-20 bg-primary-50">
+      <section className="py-20 bg-primary-50 dark:bg-primary-900/20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Готовы начать получать предсказания?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Присоединяйтесь к тысячам пользователей, которые уже используют NeuroOracle для получения точных предсказаний
-            </p>
-            <Link
-              href="https://t.me/NeuroOracle_bot"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors duration-300"
-            >
-              Начать использовать
-            </Link>
+            <FadeIn>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+                Готовы начать получать предсказания?
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+                Присоединяйтесь к тысячам пользователей, которые уже используют NeuroOracle для получения точных предсказаний
+              </p>
+              <Link
+                href="https://t.me/NeuroOracle_bot"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors duration-300"
+              >
+                Начать использовать
+              </Link>
+            </FadeIn>
           </div>
         </div>
       </section>
