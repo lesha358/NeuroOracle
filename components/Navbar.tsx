@@ -93,24 +93,71 @@ const Navbar = () => {
       </div>
 
       {/* Мобильное меню */}
-      <div className={`md:hidden transition-all duration-300 ease-in-out ${
-        isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
-      } overflow-hidden bg-white shadow-lg`}>
-        <div className="px-2 pt-2 pb-3 space-y-1">
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
-                router.pathname === item.href
-                  ? 'bg-primary-50 text-primary-600'
-                  : 'text-gray-600 hover:bg-gray-50 hover:text-primary-600'
-              }`}
-              onClick={() => setIsOpen(false)}
-            >
-              {item.name}
-            </Link>
-          ))}
+      <div className={`md:hidden fixed inset-0 z-50 transition-all duration-300 ease-in-out ${
+        isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+      }`}>
+        {/* Затемнение фона */}
+        <div 
+          className={`absolute inset-0 bg-black transition-opacity duration-300 ${
+            isOpen ? 'opacity-50' : 'opacity-0'
+          }`}
+          onClick={() => setIsOpen(false)}
+        />
+        
+        {/* Меню */}
+        <div className={`absolute right-0 top-0 h-full w-64 bg-white dark:bg-gray-800 shadow-xl transform transition-transform duration-300 ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}>
+          <div className="flex flex-col h-full">
+            {/* Заголовок */}
+            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
+              <span className="text-lg font-semibold text-gray-900 dark:text-white">Меню</span>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="p-2 rounded-md text-gray-600 hover:text-primary-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-primary-400 dark:hover:bg-gray-700"
+              >
+                <XMarkIcon className="h-6 w-6" />
+              </button>
+            </div>
+
+            {/* Навигация */}
+            <nav className="flex-1 px-4 py-4 space-y-1">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`block px-4 py-2 rounded-lg text-base font-medium transition-colors duration-200 ${
+                    router.pathname === item.href
+                      ? 'bg-primary-50 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400'
+                      : 'text-gray-600 hover:bg-gray-50 hover:text-primary-600 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-primary-400'
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+
+            {/* Нижняя часть */}
+            <div className="p-4 border-t border-gray-200 dark:border-gray-700 space-y-4">
+              {/* Переключатель темы */}
+              <div className="flex items-center justify-between px-4 py-2">
+                <span className="text-sm font-medium text-gray-600 dark:text-gray-300">Тема</span>
+                <ThemeToggle />
+              </div>
+
+              {/* Кнопка Начать */}
+              <Link
+                href="https://t.me/NeuroOracle_bot"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full bg-primary-600 text-white px-4 py-2 rounded-lg text-center font-medium hover:bg-primary-700 transition-colors duration-200"
+                onClick={() => setIsOpen(false)}
+              >
+                Начать
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
