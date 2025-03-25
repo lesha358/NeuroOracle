@@ -2,6 +2,7 @@ import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import JoinButton from '../components/JoinButton';
 import Head from 'next/head';
 import { ThemeProvider } from 'next-themes';
 
@@ -21,6 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </div>
         <Footer />
+        <JoinButton />
       </div>
     </ThemeProvider>
   );
