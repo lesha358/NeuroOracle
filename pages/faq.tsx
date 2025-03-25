@@ -39,7 +39,7 @@ const faqItems = [
 
 const FAQPage: NextPage = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
       <Head>
         <title>Часто задаваемые вопросы - NeuroOracle</title>
         <meta name="description" content="Ответы на часто задаваемые вопросы о NeuroOracle" />
@@ -47,17 +47,17 @@ const FAQPage: NextPage = () => {
 
       <main className="container mx-auto px-4 py-8">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">
+          <h1 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-8">
             Часто задаваемые вопросы
           </h1>
 
           <div className="space-y-6">
             {faqItems.map((item, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md p-6">
-                <h2 className="text-xl font-semibold text-primary-600 mb-3">
+              <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+                <h2 className="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-3">
                   {item.question}
                 </h2>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-300">
                   {item.answer}
                 </p>
               </div>
@@ -65,7 +65,7 @@ const FAQPage: NextPage = () => {
           </div>
 
           <div className="mt-12 text-center">
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 dark:text-gray-300 mb-6">
               Не нашли ответ на свой вопрос? Свяжитесь с нашей поддержкой
             </p>
             <Link
