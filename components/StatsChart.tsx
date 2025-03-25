@@ -44,6 +44,11 @@ export const StatsChart: React.FC<StatsChartProps> = ({ data }) => {
         data: data.map(category => category.accuracy),
         borderColor: isDark ? 'rgb(167, 139, 250)' : 'rgb(139, 92, 246)',
         backgroundColor: isDark ? 'rgba(167, 139, 250, 0.5)' : 'rgba(139, 92, 246, 0.5)',
+        borderWidth: 2,
+        pointBackgroundColor: isDark ? 'rgb(167, 139, 250)' : 'rgb(139, 92, 246)',
+        pointBorderColor: isDark ? 'rgb(167, 139, 250)' : 'rgb(139, 92, 246)',
+        pointRadius: 4,
+        pointHoverRadius: 6,
       },
     ],
   };
@@ -68,6 +73,7 @@ export const StatsChart: React.FC<StatsChartProps> = ({ data }) => {
         max: 100,
         grid: {
           color: isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
+          drawBorder: false,
         },
         ticks: {
           color: isDark ? '#E5E7EB' : '#374151',
@@ -76,6 +82,7 @@ export const StatsChart: React.FC<StatsChartProps> = ({ data }) => {
       x: {
         grid: {
           color: isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
+          drawBorder: false,
         },
         ticks: {
           color: isDark ? '#E5E7EB' : '#374151',

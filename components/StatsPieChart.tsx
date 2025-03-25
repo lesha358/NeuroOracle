@@ -40,6 +40,8 @@ export const StatsPieChart: React.FC<StatsPieChartProps> = ({ data }) => {
           'rgba(192, 132, 252, 0.8)',
           'rgba(216, 180, 254, 0.8)',
         ],
+        borderColor: isDark ? 'rgba(31, 41, 55, 0.8)' : 'rgba(255, 255, 255, 0.8)',
+        borderWidth: 2,
       },
     ],
   };
