@@ -7,11 +7,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="icon" href="/icons8-звезда-64.png" />
+        <link rel="apple-touch-icon" href="/icons8-звезда-64.png" />
+        <meta name="theme-color" content="#4F46E5" />
       </Head>
       <div className="fixed top-0 left-0 right-0 z-50">
         <Navbar />
