@@ -41,8 +41,23 @@ const FAQPage: NextPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
       <Head>
-        <title>Часто задаваемые вопросы - NeuroOracle</title>
-        <meta name="description" content="Ответы на часто задаваемые вопросы о NeuroOracle" />
+        <title>FAQ NeuroOracle | Частые вопросы о гаданиях и раскладах Таро</title>
+        <meta name="description" content="Найдите ответы на часто задаваемые вопросы о NeuroOracle. Как работают гадания, точность предсказаний, виды раскладов Таро, как получить предсказание и многое другое." />
+        <meta name="keywords" content="вопросы по таро, как гадать на таро, как делать расклад таро, вопросы по гаданиям, как получить предсказание, точность гаданий, виды раскладов, как гадать онлайн, таро вопросы, гадания вопросы" />
+        <meta name="author" content="NeuroOracle" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="FAQ NeuroOracle | Частые вопросы о гаданиях и раскладах Таро" />
+        <meta property="og:description" content="Найдите ответы на часто задаваемые вопросы о NeuroOracle. Как работают гадания, точность предсказаний, виды раскладов Таро и многое другое." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://neurooracle.com/faq" />
+        <meta property="og:image" content="https://neurooracle.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="FAQ NeuroOracle | Частые вопросы о гаданиях и раскладах Таро" />
+        <meta name="twitter:description" content="Найдите ответы на часто задаваемые вопросы о NeuroOracle. Как работают гадания, точность предсказаний, виды раскладов Таро и многое другое." />
+        <meta name="twitter:image" content="https://neurooracle.com/og-image.jpg" />
+        <link rel="canonical" href="https://neurooracle.com/faq" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="container mx-auto px-4 py-8">
