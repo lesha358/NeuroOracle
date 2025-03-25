@@ -37,17 +37,10 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           {/* Логотип */}
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="flex items-center space-x-2 group">
-              <div className="relative">
-                <SparklesIcon className="h-8 w-8 text-primary-600 transform group-hover:scale-110 transition-transform duration-300" />
-                <div className="absolute -inset-1 bg-primary-100 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent">
-                  NeuroOracle
-                </span>
-                <span className="text-xs text-gray-500">Ваш персональный предсказатель</span>
-              </div>
+            <Link href="/" className="flex items-center space-x-2">
+              <span className="text-2xl font-bold text-primary-600 dark:text-primary-400">
+                Neuro<span className="text-yellow-400">★</span>racle
+              </span>
             </Link>
           </div>
 
