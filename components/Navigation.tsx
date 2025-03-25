@@ -1,29 +1,17 @@
 import Link from 'next/link';
 import ThemeToggle from './ThemeToggle';
+import { SparklesIcon } from '@heroicons/react/24/outline';
 
 const Navigation = () => {
   return (
     <nav className="fixed w-full bg-white dark:bg-gray-800 shadow-sm z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center space-x-2">
+            <SparklesIcon className="h-8 w-8 text-primary-600 dark:text-primary-400" />
             <Link href="/" className="text-2xl font-bold text-primary-600 dark:text-primary-400">
               NeuroOracle
             </Link>
-            <div className="hidden md:flex space-x-6">
-              <Link href="/features" className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">
-                Возможности
-              </Link>
-              <Link href="/about" className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">
-                О нас
-              </Link>
-              <Link href="/stats" className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">
-                Статистика
-              </Link>
-              <Link href="/faq" className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">
-                FAQ
-              </Link>
-            </div>
           </div>
           <div className="flex items-center space-x-4">
             <ThemeToggle />
