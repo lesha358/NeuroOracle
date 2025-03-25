@@ -10,6 +10,7 @@ import {
   Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
+import { useTheme } from 'next-themes';
 
 ChartJS.register(
   CategoryScale,
@@ -32,14 +33,17 @@ interface StatsChartProps {
 }
 
 export const StatsChart: React.FC<StatsChartProps> = ({ data }) => {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
+
   const chartData = {
     labels: data.map(category => category.name),
     datasets: [
       {
         label: 'Точность (%)',
         data: data.map(category => category.accuracy),
-        borderColor: 'rgb(139, 92, 246)',
-        backgroundColor: 'rgba(139, 92, 246, 0.5)',
+        borderColor: isDark ? 'rgb(167, 139, 250)' : 'rgb(139, 92, 246)',
+        backgroundColor: isDark ? 'rgba(167, 139, 250, 0.5)' : 'rgba(139, 92, 246, 0.5)',
       },
     ],
   };
@@ -50,6 +54,9 @@ export const StatsChart: React.FC<StatsChartProps> = ({ data }) => {
     plugins: {
       legend: {
         position: 'top' as const,
+        labels: {
+          color: isDark ? '#E5E7EB' : '#374151',
+        },
       },
       title: {
         display: false,
@@ -59,6 +66,20 @@ export const StatsChart: React.FC<StatsChartProps> = ({ data }) => {
       y: {
         beginAtZero: true,
         max: 100,
+        grid: {
+          color: isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
+        },
+        ticks: {
+          color: isDark ? '#E5E7EB' : '#374151',
+        },
+      },
+      x: {
+        grid: {
+          color: isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
+        },
+        ticks: {
+          color: isDark ? '#E5E7EB' : '#374151',
+        },
       },
     },
   };

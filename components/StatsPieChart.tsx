@@ -6,6 +6,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
+import { useTheme } from 'next-themes';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -20,17 +21,24 @@ interface StatsPieChartProps {
 }
 
 export const StatsPieChart: React.FC<StatsPieChartProps> = ({ data }) => {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
+
   const chartData = {
     labels: data.map(category => category.name),
     datasets: [
       {
         data: data.map(category => category.count),
-        backgroundColor: [
-          'rgba(139, 92, 246, 0.8)',
+        backgroundColor: isDark ? [
           'rgba(167, 139, 250, 0.8)',
           'rgba(192, 132, 252, 0.8)',
           'rgba(216, 180, 254, 0.8)',
           'rgba(233, 213, 255, 0.8)',
+        ] : [
+          'rgba(139, 92, 246, 0.8)',
+          'rgba(167, 139, 250, 0.8)',
+          'rgba(192, 132, 252, 0.8)',
+          'rgba(216, 180, 254, 0.8)',
         ],
       },
     ],
@@ -42,6 +50,9 @@ export const StatsPieChart: React.FC<StatsPieChartProps> = ({ data }) => {
     plugins: {
       legend: {
         position: 'right' as const,
+        labels: {
+          color: isDark ? '#E5E7EB' : '#374151',
+        },
       },
     },
   };
