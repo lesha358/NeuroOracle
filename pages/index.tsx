@@ -86,36 +86,34 @@ const HomePage: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-            <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-              <div className="sm:text-center lg:text-left">
-                <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
-                  <span className="block">Узнайте своё будущее</span>
-                  <span className="block text-primary-600">с NeuroOracle</span>
-                </h1>
-                <p className="mt-3 text-base text-gray-500 dark:text-gray-400 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                  Получите точные предсказания на основе искусственного интеллекта. Узнайте, что вас ждет в любви, карьере и жизни.
-                </p>
-                <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                  <div className="rounded-md shadow">
-                    <Link
-                      href="https://t.me/NeuroOracle_bot"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 md:py-4 md:text-lg md:px-10"
-                    >
-                      Начать
-                    </Link>
-                  </div>
-                </div>
+      {/* Hero секция */}
+      <section className="relative bg-gradient-to-r from-primary-600 to-primary-800 text-white pt-16">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="container mx-auto px-4 py-12 relative">
+          <div className="max-w-3xl mx-auto text-center">
+            <FadeIn>
+              <h1 className="text-5xl font-bold mb-6">
+                Узнайте свое будущее с NeuroOracle
+              </h1>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <p className="text-xl mb-8 text-primary-100">
+                Используйте силу искусственного интеллекта для получения точных предсказаний в различных сферах жизни
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.4}>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/features"
+                  className="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors duration-300"
+                >
+                  Узнать больше
+                </Link>
               </div>
-            </main>
+            </FadeIn>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Секция возможностей */}
       <section className="py-20 bg-white dark:bg-gray-800">
