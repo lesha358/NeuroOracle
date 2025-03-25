@@ -74,7 +74,7 @@ const HomePage: NextPage = () => {
       {/* Hero секция */}
       <section className="relative bg-gradient-to-r from-primary-600 to-primary-800 text-white pt-32">
         <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="container mx-auto px-4 py-24 relative">
+        <div className="container mx-auto px-4 py-16 relative">
           <div className="max-w-3xl mx-auto text-center">
             <FadeIn>
               <h1 className="text-5xl font-bold mb-6">
