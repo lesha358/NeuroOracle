@@ -1,7 +1,6 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import Navbar from '../components/Navbar';
 
 const faqItems = [
   {
@@ -45,8 +44,6 @@ const FAQPage: NextPage = () => {
         <title>Часто задаваемые вопросы - NeuroOracle</title>
         <meta name="description" content="Ответы на часто задаваемые вопросы о NeuroOracle" />
       </Head>
-
-      <Navbar />
 
       <main className="container mx-auto px-4 py-8">
         <div className="max-w-3xl mx-auto">
