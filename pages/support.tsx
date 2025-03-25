@@ -1,7 +1,6 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import Navbar from '../components/Navbar';
 
 const SupportPage: NextPage = () => {
   return (
@@ -10,8 +9,6 @@ const SupportPage: NextPage = () => {
         <title>Поддержка - NeuroOracle</title>
         <meta name="description" content="Служба поддержки NeuroOracle" />
       </Head>
-
-      <Navbar />
 
       <main className="container mx-auto px-4 py-8">
         <div className="max-w-3xl mx-auto">
