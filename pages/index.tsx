@@ -132,14 +132,14 @@ const HomePage: NextPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <FadeIn key={index} delay={index * 0.1}>
-                <div className="bg-gray-50 dark:bg-gray-700 rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                  <div className={`${feature.color} mb-4`}>
-                    <feature.icon className="h-12 w-12" />
+                <div className="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 h-full flex flex-col">
+                  <div className="bg-primary-50 dark:bg-primary-900/30 rounded-xl w-16 h-16 flex items-center justify-center mb-6">
+                    <feature.icon className={`h-8 w-8 ${feature.color}`} />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300">
+                  <p className="text-gray-600 dark:text-gray-300 flex-grow">
                     {feature.description}
                   </p>
                 </div>

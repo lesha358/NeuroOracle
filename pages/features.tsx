@@ -51,8 +51,23 @@ const FeaturesPage: NextPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
       <Head>
-        <title>Возможности - NeuroOracle</title>
-        <meta name="description" content="Узнайте о возможностях NeuroOracle" />
+        <title>Возможности NeuroOracle | Онлайн гадания и расклады Таро</title>
+        <meta name="description" content="Исследуйте все возможности NeuroOracle: точные предсказания на основе ИИ, расклады Таро, гадания на любовь, карьеру, здоровье и финансы. Уникальная комбинация технологий и эзотерики." />
+        <meta name="keywords" content="расклады таро, гадания таро, карты таро онлайн, гадания на таро, расклад таро, таро предсказания, гадания на картах таро, онлайн таро, бесплатные расклады таро, таро гадания, таро расклад онлайн" />
+        <meta name="author" content="NeuroOracle" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Возможности NeuroOracle | Онлайн гадания и расклады Таро" />
+        <meta property="og:description" content="Исследуйте все возможности NeuroOracle: точные предсказания на основе ИИ, расклады Таро, гадания на любовь, карьеру, здоровье и финансы." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://neurooracle.com/features" />
+        <meta property="og:image" content="https://neurooracle.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Возможности NeuroOracle | Онлайн гадания и расклады Таро" />
+        <meta name="twitter:description" content="Исследуйте все возможности NeuroOracle: точные предсказания на основе ИИ, расклады Таро, гадания на любовь, карьеру, здоровье и финансы." />
+        <meta name="twitter:image" content="https://neurooracle.com/og-image.jpg" />
+        <link rel="canonical" href="https://neurooracle.com/features" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="container mx-auto px-4 py-8">
@@ -78,14 +93,14 @@ const FeaturesPage: NextPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {features.map((feature, index) => (
                   <FadeIn key={index} delay={index * 0.1}>
-                    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                      <div className={`${feature.color} mb-4`}>
-                        <feature.icon className="h-12 w-12" />
+                    <div className="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 h-full flex flex-col">
+                      <div className="bg-primary-50 dark:bg-primary-900/30 rounded-xl w-16 h-16 flex items-center justify-center mb-6">
+                        <feature.icon className={`h-8 w-8 ${feature.color}`} />
                       </div>
-                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                         {feature.title}
                       </h3>
-                      <p className="text-gray-600 dark:text-gray-300">
+                      <p className="text-gray-600 dark:text-gray-300 flex-grow">
                         {feature.description}
                       </p>
                     </div>
