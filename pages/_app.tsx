@@ -5,7 +5,7 @@ import Head from 'next/head';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
       <Head>
         <link rel="icon" href="/icons8-звезда-64.png" />
         <link rel="apple-touch-icon" href="/icons8-звезда-64.png" />
