@@ -1,105 +1,95 @@
 import { NextPage } from 'next';
-import Head from 'next/head';
 import { StatsChart } from '../components/StatsChart';
 import { StatsPieChart } from '../components/StatsPieChart';
 import { FadeIn } from '../components/FadeIn';
 
 const stats = [
   {
-    title: 'Общая точность',
-    value: '83%',
-    description: 'Средняя точность предсказаний'
+    title: 'Всего пользователей',
+    value: '853',
+    description: 'Активных пользователей',
+    icon: '👥'
   },
   {
     title: 'Всего предсказаний',
-    value: '15,234',
-    description: 'Успешных предсказаний'
+    value: '12,847',
+    description: 'Успешных предсказаний',
+    icon: '✨'
   },
   {
-    title: 'Активных пользователей',
-    value: '2,456',
-    description: 'Ежемесячно'
+    title: 'Средняя точность',
+    value: '87%',
+    description: 'По всем категориям',
+    icon: '🎯'
   },
   {
-    title: 'Среднее время ответа',
-    value: '1.2с',
-    description: 'На обработку запроса'
+    title: 'Активность',
+    value: '92%',
+    description: 'Пользователей за 30 дней',
+    icon: '📈'
   }
 ];
 
 const categoryData = [
-  { name: 'Любовь', count: 5234, accuracy: 85 },
-  { name: 'Карьера', count: 4123, accuracy: 82 },
-  { name: 'Здоровье', count: 3456, accuracy: 81 },
-  { name: 'Финансы', count: 3421, accuracy: 84 }
-];
-
-const mockData = [
-  { name: 'Любовь', count: 150, accuracy: 85 },
-  { name: 'Карьера', count: 120, accuracy: 82 },
-  { name: 'Здоровье', count: 90, accuracy: 78 },
-  { name: 'Финансы', count: 80, accuracy: 75 },
+  { name: 'Любовь', count: 3847, accuracy: 89 },
+  { name: 'Карьера', count: 3124, accuracy: 85 },
+  { name: 'Здоровье', count: 2845, accuracy: 86 },
+  { name: 'Финансы', count: 2831, accuracy: 88 }
 ];
 
 const StatsPage: NextPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
-      <Head>
-        <title>Статистика - NeuroOracle</title>
-        <meta name="description" content="Статистика работы NeuroOracle" />
-      </Head>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <FadeIn>
+          <h1 className="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
+            Статистика NeuroOracle
+          </h1>
+        </FadeIn>
 
-      <main className="container mx-auto px-4 py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {stats.map((stat, index) => (
+            <FadeIn key={index}>
+              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+                <div className="text-3xl mb-2">{stat.icon}</div>
+                <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  {stat.title}
+                </h2>
+                <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">
+                  {stat.value}
+                </div>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {stat.description}
+                </p>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <FadeIn>
-            <h1 className="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
-              Статистика предсказаний
-            </h1>
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
+                Точность по категориям
+              </h2>
+              <div className="h-[300px]">
+                <StatsChart data={categoryData} />
+              </div>
+            </div>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <FadeIn>
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-                <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-                  Точность предсказаний по категориям
-                </h2>
-                <div className="h-80">
-                  <StatsChart data={mockData} />
-                </div>
+          <FadeIn>
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
+                Распределение по категориям
+              </h2>
+              <div className="h-[300px]">
+                <StatsPieChart data={categoryData} />
               </div>
-            </FadeIn>
-
-            <FadeIn>
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-                <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-                  Распределение запросов
-                </h2>
-                <div className="h-80">
-                  <StatsPieChart data={mockData} />
-                </div>
-              </div>
-            </FadeIn>
-          </div>
-
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {mockData.map((category) => (
-              <FadeIn key={category.name}>
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-                  <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">
-                    {category.name}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300">
-                    Количество запросов: {category.count}
-                  </p>
-                  <p className="text-gray-600 dark:text-gray-300">
-                    Точность: {category.accuracy}%
-                  </p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
+            </div>
+          </FadeIn>
         </div>
-      </main>
+      </div>
     </div>
   );
 };
