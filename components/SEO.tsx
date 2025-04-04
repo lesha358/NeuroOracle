@@ -36,7 +36,7 @@ export default function SEO({
       <meta name="yandex-verification" content="a5bf3622a3f05fbe" />
       
       {/* Yandex Metrika Verification */}
-      <meta name="yandex-verification" content="ваш-код-метрики" />
+      <meta name="yandex-verification" content="100791819" />
       
       {/* Canonical URL */}
       <link rel="canonical" href="https://neurooracle.com" />
