@@ -91,7 +91,11 @@ const HomePage: NextPage = () => {
 
         {/* Hero секция */}
         <section className="relative bg-gradient-to-r from-primary-600 to-primary-800 text-white pt-16">
-          <div className="absolute inset-0 bg-black opacity-20"></div>
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+            style={{ backgroundImage: 'url(/images/bg.jpg)' }}
+          />
+          <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="container mx-auto px-4 py-12 relative">
             <div className="max-w-3xl mx-auto text-center">
               <FadeIn>
