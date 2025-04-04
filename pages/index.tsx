@@ -93,7 +93,7 @@ const HomePage: NextPage = () => {
           <div className="max-w-3xl mx-auto text-center">
             <FadeIn>
               <h1 className="text-5xl font-bold mb-6">
-                Узнайте свое будущее с NeuroOracle
+                Узнайте свое будущее бесплатно с NeuroOracle
               </h1>
             </FadeIn>
             <FadeIn delay={0.2}>

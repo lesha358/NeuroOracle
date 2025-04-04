@@ -2,6 +2,7 @@ import { NextPage } from 'next';
 import { StatsChart } from '../components/StatsChart';
 import { StatsPieChart } from '../components/StatsPieChart';
 import { FadeIn } from '../components/FadeIn';
+import Head from 'next/head';
 
 const stats = [
   {
@@ -40,6 +41,25 @@ const categoryData = [
 const StatsPage: NextPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
+      <Head>
+        <title>Статистика NeuroOracle | Точность предсказаний и раскладов Таро</title>
+        <meta name="description" content="Убедитесь в точности предсказаний NeuroOracle: 87% точность, более 12,000 успешных предсказаний, 853 активных пользователей. Статистика по категориям: любовь, карьера, здоровье, финансы." />
+        <meta name="keywords" content="точность предсказаний таро, статистика гаданий, точность раскладов таро, отзывы о гаданиях, результаты предсказаний, эффективность таро, статистика таро, точность гаданий, отзывы о таро, результаты гаданий" />
+        <meta name="author" content="NeuroOracle" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Статистика NeuroOracle | Точность предсказаний и раскладов Таро" />
+        <meta property="og:description" content="Убедитесь в точности предсказаний NeuroOracle: 87% точность, более 12,000 успешных предсказаний, 853 активных пользователей." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://neurooracle.com/stats" />
+        <meta property="og:image" content="https://neurooracle.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Статистика NeuroOracle | Точность предсказаний и раскладов Таро" />
+        <meta name="twitter:description" content="Убедитесь в точности предсказаний NeuroOracle: 87% точность, более 12,000 успешных предсказаний, 853 активных пользователей." />
+        <meta name="twitter:image" content="https://neurooracle.com/og-image.jpg" />
+        <link rel="canonical" href="https://neurooracle.com/stats" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <FadeIn>
           <h1 className="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
