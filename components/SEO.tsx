@@ -33,7 +33,10 @@ export default function SEO({
       <meta name="twitter:image" content={ogImage} />
       
       {/* Yandex Verification */}
-      <meta name="yandex-verification" content="ваш-код-верификации" />
+      <meta name="yandex-verification" content="a5bf3622a3f05fbe" />
+      
+      {/* Yandex Metrika Verification */}
+      <meta name="yandex-verification" content="ваш-код-метрики" />
       
       {/* Canonical URL */}
       <link rel="canonical" href="https://neurooracle.com" />
