@@ -17,25 +17,25 @@ import FadeIn from '../components/animations/FadeIn';
 const features = [
   {
     title: 'Точные предсказания',
-    description: 'Используйте силу искусственного интеллекта для получения точных предсказаний в различных сферах жизни.',
+    description: 'Используйте силу искусственного интеллекта и карт Таро для получения точных предсказаний в различных сферах жизни.',
     icon: SparklesIcon,
     color: 'text-purple-600'
   },
   {
     title: 'Различные категории',
-    description: 'Получайте предсказания по любви, карьере, здоровью, финансам и многим другим темам.',
+    description: 'Получайте предсказания по любви, карьере, здоровью, финансам и многим другим темам с помощью карт Таро и ИИ.',
     icon: ChartBarIcon,
     color: 'text-blue-600'
   },
   {
     title: 'Карты Таро',
-    description: 'Специальные расклады на картах Таро для более глубокого понимания ситуации.',
+    description: 'Профессиональные расклады на картах Таро для более глубокого понимания ситуации и получения точных предсказаний.',
     icon: ShieldCheckIcon,
     color: 'text-green-600'
   },
   {
     title: '24/7 Доступность',
-    description: 'Получайте предсказания в любое время дня и ночи.',
+    description: 'Получайте предсказания и гадания онлайн в любое время дня и ночи.',
     icon: ClockIcon,
     color: 'text-orange-600'
   }
@@ -44,22 +44,22 @@ const features = [
 const benefits = [
   {
     title: 'Удобный интерфейс',
-    description: 'Простой и понятный интерфейс для получения предсказаний',
+    description: 'Простой и понятный интерфейс для получения онлайн гаданий и предсказаний',
     icon: ChatBubbleLeftRightIcon
   },
   {
     title: 'Большое сообщество',
-    description: 'Присоединяйтесь к тысячам пользователей, которые уже используют NeuroOracle',
+    description: 'Присоединяйтесь к тысячам пользователей, которые уже используют NeuroOracle для гаданий онлайн',
     icon: UserGroupIcon
   },
   {
     title: 'Регулярные обновления',
-    description: 'Постоянно улучшаем качество предсказаний и добавляем новые функции',
+    description: 'Постоянно улучшаем качество предсказаний и добавляем новые расклады Таро',
     icon: ArrowPathIcon
   },
   {
     title: 'Быстрый старт',
-    description: 'Начните получать предсказания уже через несколько минут',
+    description: 'Начните получать предсказания и гадания онлайн уже через несколько минут',
     icon: RocketLaunchIcon
   }
 ];
@@ -67,23 +67,24 @@ const benefits = [
 const HomePage: NextPage = () => {
   return (
     <>
-      <SEO />
+      <SEO 
+        title="Гадания онлайн и расклады Таро | NeuroOracle - Бесплатные предсказания"
+        description="Получите точные предсказания с помощью карт Таро и искусственного интеллекта. Бесплатные онлайн гадания на любовь, карьеру, здоровье и финансы. Профессиональные расклады Таро онлайн."
+      />
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
         <Head>
-          <title>NeuroOracle - Точные предсказания на основе ИИ и Таро | Онлайн гадания</title>
-          <meta name="description" content="Получите точные предсказания с помощью искусственного интеллекта и карт Таро. Гадания на любовь, карьеру, здоровье и финансы. Бесплатные онлайн расклады с высокой точностью." />
-          <meta name="keywords" content="гадания онлайн, таро расклады, предсказания, гадания на любовь, гадания на карьеру, гадания на здоровье, гадания на финансы, искусственный интеллект, нейросеть, онлайн гадалка, бесплатные гадания, точные предсказания" />
+          <meta name="keywords" content="гадания онлайн, таро расклады, предсказания, гадания на любовь, гадания на карьеру, гадания на здоровье, гадания на финансы, искусственный интеллект, нейросеть, онлайн гадалка, бесплатные гадания, точные предсказания, карты таро онлайн, расклады таро, гадание таро, таро предсказания" />
           <meta name="author" content="NeuroOracle" />
           <meta name="robots" content="index, follow" />
-          <meta property="og:title" content="NeuroOracle - Точные предсказания на основе ИИ и Таро" />
-          <meta property="og:description" content="Получите точные предсказания с помощью искусственного интеллекта и карт Таро. Гадания на любовь, карьеру, здоровье и финансы." />
+          <meta property="og:title" content="Гадания онлайн и расклады Таро | NeuroOracle - Бесплатные предсказания" />
+          <meta property="og:description" content="Получите точные предсказания с помощью карт Таро и искусственного интеллекта. Бесплатные онлайн гадания на любовь, карьеру, здоровье и финансы." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://neurooracle.com" />
-          <meta property="og:image" content="https://neurooracle.com/og-image.jpg" />
+          <meta property="og:image" content="https://neurooracle.com/images/bg.jpg" />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="NeuroOracle - Точные предсказания на основе ИИ и Таро" />
-          <meta name="twitter:description" content="Получите точные предсказания с помощью искусственного интеллекта и карт Таро. Гадания на любовь, карьеру, здоровье и финансы." />
-          <meta name="twitter:image" content="https://neurooracle.com/og-image.jpg" />
+          <meta name="twitter:title" content="Гадания онлайн и расклады Таро | NeuroOracle - Бесплатные предсказания" />
+          <meta name="twitter:description" content="Получите точные предсказания с помощью карт Таро и искусственного интеллекта. Бесплатные онлайн гадания на любовь, карьеру, здоровье и финансы." />
+          <meta name="twitter:image" content="https://neurooracle.com/images/bg.jpg" />
           <link rel="canonical" href="https://neurooracle.com" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
@@ -100,12 +101,12 @@ const HomePage: NextPage = () => {
             <div className="max-w-3xl mx-auto text-center">
               <FadeIn>
                 <h1 className="text-5xl font-bold mb-6">
-                  Узнайте свое будущее бесплатно с NeuroOracle
+                  Гадания онлайн и расклады Таро бесплатно
                 </h1>
               </FadeIn>
               <FadeIn delay={0.2}>
                 <p className="text-xl mb-8 text-primary-100">
-                  Используйте силу искусственного интеллекта для получения точных предсказаний в различных сферах жизни
+                  Используйте силу карт Таро и искусственного интеллекта для получения точных предсказаний в различных сферах жизни
                 </p>
               </FadeIn>
               <FadeIn delay={0.4}>
@@ -116,7 +117,7 @@ const HomePage: NextPage = () => {
                     rel="noopener noreferrer"
                     className="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors duration-300"
                   >
-                    Узнать будущее
+                    Получить предсказание
                   </Link>
                 </div>
               </FadeIn>
@@ -130,10 +131,10 @@ const HomePage: NextPage = () => {
             <FadeIn>
               <div className="text-center mb-16">
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                  Возможности NeuroOracle
+                  Возможности онлайн гаданий
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                  Откройте для себя все преимущества использования нашего сервиса предсказаний
+                  Откройте для себя все преимущества использования нашего сервиса предсказаний и гаданий онлайн
                 </p>
               </div>
             </FadeIn>
@@ -164,10 +165,10 @@ const HomePage: NextPage = () => {
             <FadeIn>
               <div className="text-center mb-16">
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                  Почему выбирают нас
+                  Почему выбирают наши онлайн гадания
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                  Мы предлагаем уникальный опыт получения предсказаний
+                  Мы предлагаем уникальный опыт получения предсказаний с помощью карт Таро и искусственного интеллекта
                 </p>
               </div>
             </FadeIn>
@@ -198,10 +199,10 @@ const HomePage: NextPage = () => {
             <div className="max-w-3xl mx-auto text-center">
               <FadeIn>
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                  Готовы начать получать предсказания?
+                  Готовы получить предсказание?
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-                  Присоединяйтесь к тысячам пользователей, которые уже используют NeuroOracle для получения точных предсказаний
+                  Присоединяйтесь к тысячам пользователей, которые уже используют NeuroOracle для онлайн гаданий и предсказаний
                 </p>
                 <Link
                   href="https://t.me/NeuroOracle_bot"
@@ -209,7 +210,7 @@ const HomePage: NextPage = () => {
                   rel="noopener noreferrer"
                   className="inline-block bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors duration-300"
                 >
-                  Начать использовать
+                  Начать гадание онлайн
                 </Link>
               </FadeIn>
             </div>

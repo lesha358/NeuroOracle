@@ -6,13 +6,15 @@ interface SEOProps {
   description?: string;
   image?: string;
   type?: string;
+  keywords?: string;
 }
 
 const SEO: React.FC<SEOProps> = ({
   title = 'NeuroOracle - Точные предсказания на основе ИИ и Таро',
   description = 'Получите точные предсказания с помощью искусственного интеллекта и карт Таро. Гадания на любовь, карьеру, здоровье и финансы.',
   image = 'https://neurooracle.com/images/bg.jpg',
-  type = 'website'
+  type = 'website',
+  keywords = 'гадание, таро, предсказания, ии, искусственный интеллект, нейрооракул'
 }) => {
   const router = useRouter();
   const canonicalUrl = `https://neurooracle.com${router.asPath}`;
@@ -37,13 +39,15 @@ const SEO: React.FC<SEOProps> = ({
       ratingValue: '4.8',
       ratingCount: '1000'
     },
-    inLanguage: 'ru-RU'
+    inLanguage: 'ru-RU',
+    keywords: keywords
   };
 
   return (
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="canonical" href={canonicalUrl} />
       

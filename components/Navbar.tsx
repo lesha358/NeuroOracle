@@ -7,6 +7,7 @@ import { ThemeToggle } from './ThemeToggle';
 const navigation = [
   { name: 'Главная', href: '/' },
   { name: 'Возможности', href: '/features' },
+  { name: 'Блог', href: '/blog' },
   { name: 'Статистика', href: '/stats' },
   { name: 'FAQ', href: '/faq' },
   { name: 'Поддержка', href: '/support' },

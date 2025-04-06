@@ -1,33 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://neurooracle.com/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2025-04-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neurooracle.com/en"/>
+    <image:image>
+      <image:loc>https://neurooracle.com/images/bg.jpg</image:loc>
+      <image:title>NeuroOracle - Точные предсказания</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://neurooracle.com/tarot</loc>
+    <lastmod>2025-04-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neurooracle.com/en/tarot"/>
+    <image:image>
+      <image:loc>https://neurooracle.com/images/tarot-bg.jpg</image:loc>
+      <image:title>Расклады Таро онлайн</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://neurooracle.com/blog</loc>
+    <lastmod>2025-04-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neurooracle.com/en/blog"/>
+  </url>
+  <url>
+    <loc>https://neurooracle.com/blog/kak-pravilno-gadat-na-kartah-taro</loc>
+    <lastmod>2025-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neurooracle.com/en/blog/how-to-read-tarot-cards"/>
+    <image:image>
+      <image:loc>https://neurooracle.com/images/blog/tarot-guide.jpg</image:loc>
+      <image:title>Как правильно гадать на картах Таро</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://neurooracle.com/blog/znachenie-kart-taro-v-lyubvi</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neurooracle.com/en/blog/tarot-love-meaning"/>
+    <image:image>
+      <image:loc>https://neurooracle.com/images/blog/tarot-love.jpg</image:loc>
+      <image:title>Значение карт Таро в любви и отношениях</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://neurooracle.com/blog/ai-v-gadaniyah</loc>
+    <lastmod>2025-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neurooracle.com/en/blog/ai-in-divination"/>
+    <image:image>
+      <image:loc>https://neurooracle.com/images/blog/ai-divination.jpg</image:loc>
+      <image:title>Как искусственный интеллект помогает в гаданиях</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://neurooracle.com/about</loc>
+    <lastmod>2025-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neurooracle.com/en/about"/>
   </url>
   <url>
     <loc>https://neurooracle.com/features</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2025-04-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neurooracle.com/en/features"/>
   </url>
   <url>
     <loc>https://neurooracle.com/stats</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2025-04-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neurooracle.com/en/stats"/>
   </url>
   <url>
     <loc>https://neurooracle.com/support</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2025-04-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neurooracle.com/en/support"/>
   </url>
   <url>
     <loc>https://neurooracle.com/faq</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2025-04-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neurooracle.com/en/faq"/>
   </url>
 </urlset> 
