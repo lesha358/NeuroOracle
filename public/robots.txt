@@ -1,21 +1,62 @@
-User-agent: Yandex
-Allow: /
-Allow: /features
-Allow: /stats
-Allow: /support
-Allow: /faq
-Allow: /sitemap.xml
-Disallow: /api/
-Disallow: /_next/
-Disallow: /static/
-
+# Global rules
 User-agent: *
 Allow: /
 Allow: /features
 Allow: /stats
 Allow: /support
 Allow: /faq
+Allow: /about
 Allow: /sitemap.xml
+Allow: /favicon.png
+Allow: /images/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+Disallow: /.env
+Disallow: /.git
+Disallow: /node_modules/
+
+# Google specific rules
+User-agent: Googlebot
+Allow: /
+Allow: /features
+Allow: /stats
+Allow: /support
+Allow: /faq
+Allow: /about
+Allow: /sitemap.xml
+Allow: /favicon.png
+Allow: /images/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Yandex specific rules
+User-agent: Yandex
+Allow: /
+Allow: /features
+Allow: /stats
+Allow: /support
+Allow: /faq
+Allow: /about
+Allow: /sitemap.xml
+Allow: /favicon.png
+Allow: /images/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Bing specific rules
+User-agent: Bingbot
+Allow: /
+Allow: /features
+Allow: /stats
+Allow: /support
+Allow: /faq
+Allow: /about
+Allow: /sitemap.xml
+Allow: /favicon.png
+Allow: /images/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /static/
