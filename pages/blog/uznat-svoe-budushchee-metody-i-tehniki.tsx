@@ -2,8 +2,8 @@ import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BlogPost } from '../../types/blog';
-import BlogTags from '../../components/BlogTags';
+import type { BlogPost } from '@/types/blog';
+import BlogTags from '@/components/BlogTags';
 
 const article: BlogPost = {
   title: 'Узнать своё будущее: методы и техники предсказания судьбы',
