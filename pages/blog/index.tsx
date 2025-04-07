@@ -64,6 +64,26 @@ const blogPosts: BlogPost[] = [
     tags: ['Астрология', 'Натальная карта', 'Судьба'],
     slug: 'natalnaya-karta-kluch-k-ponimaniyu-sudby',
     image: '/images/blog/natal-chart.webp'
+  },
+  {
+    id: '5',
+    title: 'Гадания онлайн: как получить точный ответ на свои вопросы',
+    description: 'Подробный гид по онлайн-гаданиям: от выбора правильного сервиса до интерпретации результатов. Узнайте, как получить достоверные предсказания через интернет.',
+    date: '2025-04-01',
+    author: 'NeuroOracle',
+    tags: ['Гадания', 'Онлайн', 'Предсказания'],
+    slug: 'gadaniya-onlayn-kak-poluchit-tochnyy-otvet',
+    image: '/images/blog/online-divination.webp'
+  },
+  {
+    id: '6',
+    title: 'Узнать своё будущее: методы и техники предсказания судьбы',
+    description: 'Исследуем различные методы предсказания будущего: от древних практик до современных технологий. Узнайте, как правильно задавать вопросы и интерпретировать ответы.',
+    date: '2025-04-02',
+    author: 'NeuroOracle',
+    tags: ['Будущее', 'Судьба', 'Предсказания'],
+    slug: 'uznat-svoe-budushchee-metody-i-tehniki',
+    image: '/images/blog/future-prediction.webp'
   }
 ];
 
