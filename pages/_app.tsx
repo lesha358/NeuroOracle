@@ -12,8 +12,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute="class">
       <Head>
-        <link rel="icon" href="/icons8-звезда-64.png" />
-        <link rel="apple-touch-icon" href="/icons8-звезда-64.png" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
         <meta name="theme-color" content="#4F46E5" />
       </Head>
       <SEO />

@@ -52,10 +52,10 @@ const SEO: React.FC<SEOProps> = ({
       <link rel="canonical" href={canonicalUrl} />
       
       {/* Favicon */}
-      <link rel="icon" type="image/png" href="/favicon.png" />
-      <link rel="shortcut icon" type="image/png" href="/favicon.png" />
-      <link rel="apple-touch-icon" href="/favicon.png" />
-      <meta name="msapplication-TileImage" content="/favicon.png" />
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" href="/favicon.ico" />
+      <meta name="msapplication-TileImage" content="/favicon.ico" />
       <meta name="msapplication-TileColor" content="#4F46E5" />
       
       {/* Language alternates */}

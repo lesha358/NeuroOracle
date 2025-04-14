@@ -7,6 +7,7 @@ Allow: /support
 Allow: /faq
 Allow: /about
 Allow: /sitemap.xml
+Allow: /favicon.ico
 Allow: /favicon.png
 Allow: /images/
 Disallow: /api/
@@ -25,6 +26,7 @@ Allow: /support
 Allow: /faq
 Allow: /about
 Allow: /sitemap.xml
+Allow: /favicon.ico
 Allow: /favicon.png
 Allow: /images/
 Disallow: /api/
@@ -40,6 +42,7 @@ Allow: /support
 Allow: /faq
 Allow: /about
 Allow: /sitemap.xml
+Allow: /favicon.ico
 Allow: /favicon.png
 Allow: /images/
 Disallow: /api/
@@ -55,6 +58,7 @@ Allow: /support
 Allow: /faq
 Allow: /about
 Allow: /sitemap.xml
+Allow: /favicon.ico
 Allow: /favicon.png
 Allow: /images/
 Disallow: /api/
